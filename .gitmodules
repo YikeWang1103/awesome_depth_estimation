@@ -1,0 +1,3 @@
+[submodule "models/ml-depth-pro"]
+	path = models/ml-depth-pro
+	url = git@github.com:YikeWang1103/ml-depth-pro.git
