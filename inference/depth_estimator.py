@@ -1,7 +1,7 @@
-
-
 import os, sys
-sys.path.append(os.getcwd())
+sys.path.append(os.getcwd())  # 确保当前工作目录在sys.path中
+# 添加以下行以确保models目录在sys.path中
+sys.path.append(os.path.join(os.getcwd(), 'models', 'ml_depth_pro', 'src'))
 
 from models.ml_depth_pro.src import depth_pro
 
