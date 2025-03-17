@@ -32,12 +32,5 @@ class DepthEstimator:
         depth_npy = prediction["depth"]  # Depth in [m].
 
         return depth_npy
-    
 
-if __name__ == '__main__':
-
-
-    depth_estimator = DepthEstimator('ml-depth-pro')
-    depth_npy = depth_estimator.inference("/mnt/nas/perception/yike/validation/temp/3_65/input_rgb_0/1737019012274192331.png")
-    
     

@@ -55,9 +55,6 @@ def main(dumped_file_folder, output_folder_name, model_name, depth_threshold, sa
 
                 rgb_image = cv2.imread(rgb_image_file_path)
                 overlayed_image = add_mask_overlay(rgb_image, depth_mask, (0,0,255), 0.3)
-                # overlayed_image = add_mask_contour(overlayed_image, depth_mask, (0,255,255), 2)
-                # overlayed_image = cv2.hconcat([rgb_image, overlayed_image])
-                # 保存带有轮廓的叠加图像
                 overlayed_image_path = os.path.join(overlayed_image_folder_path, rgb_image_file)
                 cv2.imwrite(overlayed_image_path, overlayed_image)
 
@@ -71,7 +68,7 @@ def main(dumped_file_folder, output_folder_name, model_name, depth_threshold, sa
 
 
             # save depth_mask in .npy format
-            depth_mask_folder_path = os.path.join(output_folder_path, 'mask')
+            depth_mask_folder_path = os.path.join(output_folder_path, 'masks')
             if not os.path.exists(depth_mask_folder_path):
                 os.makedirs(depth_mask_folder_path)
 
